@@ -52,6 +52,19 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
 `;
+const Cart = styled.div`
+  position: relative;
+`;
+const Badge = styled.span`
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 3px 5px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+`;
 
 const Navbar = () => {
   return (
@@ -76,7 +89,10 @@ const Navbar = () => {
             <MenuItem>Sign In</MenuItem>
             <MenuItem>
               {/* <FaOpencart style={{ fontSize: 22 }} /> */}
-              <FiShoppingCart style={{ fontSize: 22 }} />
+              <Cart>
+                <FiShoppingCart style={{ fontSize: 22 }} />
+                <Badge>{0}</Badge>
+              </Cart>
             </MenuItem>
           </Right>
         </Wrapper>
